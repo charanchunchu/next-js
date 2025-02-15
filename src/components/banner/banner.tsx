@@ -36,12 +36,12 @@ const slides = [
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=800&q=80",
   },
 ]
-const windowColors = [
-  { id: 'brown', src: '/half.png', label: 'Classic Brown' },
-  { id: 'white', src: '/customization-pic.jpg', label: 'Pure White' },
-  { id: 'black', src: '/lovable-uploads/window-black.png', label: 'Modern Black' },
-  { id: 'gray', src: '/lovable-uploads/window-gray.png', label: 'Urban Gray' },
-];
+// const windowColors = [
+//   { id: 'brown', src: '/half.png', label: 'Classic Brown' },
+//   { id: 'white', src: '/customization-pic.jpg', label: 'Pure White' },
+//   { id: 'black', src: '/lovable-uploads/window-black.png', label: 'Modern Black' },
+//   { id: 'gray', src: '/lovable-uploads/window-gray.png', label: 'Urban Gray' },
+// ];
 export default function Banner() {
 //   const [selectedColor, setSelectedColor] = useState(windowColors[0]);
   const [currentSlide, setCurrentSlide] = useState(0)
