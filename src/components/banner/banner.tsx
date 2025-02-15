@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { useState, useEffect, useCallback } from "react"
 import { fadeIn } from "../pages/variants"
+import Image from "next/image";
 
 const slides = [
   {
@@ -18,7 +19,7 @@ const slides = [
     title: "MODERN",
     subtitle: "INTERIORS",
     description: "Elevate your living spaces with our contemporary interior solutions and expert craftsmanship.",
-    image: "modern_interior",
+    image: "/modern_interior",
   },
   {
     id: 3,
@@ -42,7 +43,7 @@ const windowColors = [
   { id: 'gray', src: '/lovable-uploads/window-gray.png', label: 'Urban Gray' },
 ];
 export default function Banner() {
-  const [selectedColor, setSelectedColor] = useState(windowColors[0]);
+//   const [selectedColor, setSelectedColor] = useState(windowColors[0]);
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
@@ -50,9 +51,9 @@ export default function Banner() {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }, [])
 
-  const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }, [])
+//   const prevSlide = useCallback(() => {
+//     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+//   }, [])
 
   useEffect(() => {
     let intervalId: NodeJS.Timeout
@@ -116,11 +117,13 @@ export default function Banner() {
                 className={`w-24 h-24 rounded-lg overflow-hidden border-2 transition-colors ${currentSlide === index ? "border-orange-500" : "border-transparent"
                   }`}
               >
-                <img
-                  src={slide.image || "/placeholder.svg"}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                <Image 
+  src={slide.image || "/placeholder.svg"} 
+  alt={`Slide ${index + 1}`} 
+  width={96} // Adjust dimensions
+  height={96} 
+  className="w-full h-full object-cover"
+/>
               </button>
             ))}
           </div>
