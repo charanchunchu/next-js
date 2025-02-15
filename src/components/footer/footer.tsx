@@ -1,4 +1,5 @@
 import { Building2, Mail, Phone, MapPin } from 'lucide-react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -18,20 +19,20 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-200 hover:text-white transition-colors">Home</a></li>
-              <li><a href="/about" className="text-gray-200 hover:text-white transition-colors">About</a></li>
-              <li><a href="/services" className="text-gray-200 hover:text-white transition-colors">Services</a></li>
-              <li><a href="/contact" className="text-gray-200 hover:text-white transition-colors">Contact</a></li>
+              <li><Link href="/" className="text-gray-200 hover:text-white transition-colors">Home</Link></li>
+              <li><Link href="/about" className="text-gray-200 hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/services" className="text-gray-200 hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="/contact" className="text-gray-200 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="/services?type=window" className="text-gray-200 hover:text-white transition-colors">Window Solutions</a></li>
-              <li><a href="/services?type=warranty" className="text-gray-200 hover:text-white transition-colors">Warranty Services</a></li>
-              <li><a href="/services?type=door" className="text-gray-200 hover:text-white transition-colors">Door Systems</a></li>
-              <li><a href="/services?type=interior-design" className="text-gray-200 hover:text-white transition-colors">Interior design</a></li>
+              <li><Link href="/services?type=window" className="text-gray-200 hover:text-white transition-colors">Window Solutions</Link></li>
+              <li><Link href="/services?type=warranty" className="text-gray-200 hover:text-white transition-colors">Warranty Services</Link></li>
+              <li><Link href="/services?type=door" className="text-gray-200 hover:text-white transition-colors">Door Systems</Link></li>
+              <li><Link href="/services?type=interior-design" className="text-gray-200 hover:text-white transition-colors">Interior design</Link></li>
             </ul>
           </div>
 
