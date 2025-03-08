@@ -7,9 +7,9 @@ import { Menu, X } from "lucide-react"
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Contact", path: "/contact" },
+  { name: "About", path: "/udayabout" },
+  { name: "Services", path: "/udayservices" },
+  { name: "Contact", path: "/udaycontact" },
 ]
 
 export default function Header() {
@@ -39,9 +39,18 @@ export default function Header() {
   return (
     <header className={`top-0 left-0 right-0 z-50 ${isTransparent ? "absolute bg-transparent" : "sticky bg-white shadow-md"}`}>
       <nav className="container mx-auto px-4 py-6 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
-          UDAYA INFRASTRUCTURES
-        </Link>
+      <Link href="/" className="flex items-center space-x-3 p-2">
+      {/* Icon in the center-left */}
+      {/* <Building2 className="w-6 h-6 text-blue" /> */}
+
+      {/* Text in two lines with gradient */}
+      <div className="flex flex-col leading-tight">
+        <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
+          UDAYA
+        </span>
+        <span className="text-2.5xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">INFRASTRUCTURE</span>
+      </div>
+    </Link>
 
         <button
           className={`md:hidden text-gray-700 focus:outline-none z-20 ${isMenuOpen ? 'fixed top-6 right-6' : ''}`}
