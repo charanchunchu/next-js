@@ -360,20 +360,20 @@ export default function Services() {
                 </FadeIn>
                 <FadeIn direction="up" delay={0.2} duration={0.8} amount={0.5}>
                   <div>
-  <h2 className="text-4xl font-bold mb-6">Coloured Profile</h2>
-  <p className="text-gray-300 mb-8">
-    Personalize your uPVC windows and doors with bold and stylish colors to match your interior and exterior themes.
-  </p>
-  <div className="grid grid-cols-3 gap-6">
-    <div className="p-4 bg-white text-black rounded-lg">Elegant-White</div>
-    <div className="p-4 bg-[#654321] text-white rounded-lg">Dark Oak</div>
-    <div className="p-4 bg-[#D4A017] text-white rounded-lg">Golden Oak</div>
-    <div className="p-4 bg-[#4B2C20] text-white rounded-lg">Mahogany</div>
-    <div className="p-4 bg-[#8B4513] text-white rounded-lg">Walnut</div>
-    <div className="p-4 bg-gray-400 text-black rounded-lg">Grey/Platinum</div>
-    <div className="p-4 bg-black text-white rounded-lg">Bold-Black</div>
-  </div>
-</div>
+                    <h2 className="text-4xl font-bold mb-6">Coloured Profile</h2>
+                    <p className="text-gray-300 mb-8">
+                      Personalize your uPVC windows and doors with bold and stylish colors to match your interior and exterior themes.
+                    </p>
+                    <div className="grid grid-cols-3 gap-6">
+                      <div className="p-4 bg-white text-black rounded-lg">Elegant-White</div>
+                      <div className="p-4 bg-[#654321] text-white rounded-lg">Dark Oak</div>
+                      <div className="p-4 bg-[#D4A017] text-white rounded-lg">Golden Oak</div>
+                      <div className="p-4 bg-[#4B2C20] text-white rounded-lg">Mahogany</div>
+                      <div className="p-4 bg-[#8B4513] text-white rounded-lg">Walnut</div>
+                      <div className="p-4 bg-gray-400 text-black rounded-lg">Grey/Platinum</div>
+                      <div className="p-4 bg-black text-white rounded-lg">Bold-Black</div>
+                    </div>
+                  </div>
                 </FadeIn>
               </div>
             </div>
@@ -491,14 +491,7 @@ export default function Services() {
               <span className="absolute left-0 bottom-[-6px] h-1 w-20 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
             </h2>
             <div className="container flex justify-center">
-              <div className="relative w-64 h-40 mx-auto">
-                <Image
-                  src="/villa-window-app-pic.jpg"
-                  alt="Villa Window"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <img src="/villa-window-app-pic.jpg" alt="Villa Window" className="mx-auto" />
             </div>
           </section>
         </div>
