@@ -94,7 +94,7 @@ export default function About() {
               <p className="text-white">
                 With years of experience, we have successfully delivered landmark projects that have transformed urban spaces and improved communities. Now, expanding our expertise, Udaya Architecture specializes in high-quality uPVC & WPC windows and doors, providing durable, stylish, and energy-efficient solutions for homes and businesses.
               </p>
-              <p className="text-white">At Udaya, we believe in modern design, sustainability, and long-term reliability. Whether you`&apos;`re looking to upgrade your space or explore franchise opportunities, we are here to help you build a better, stronger, and more beautiful future.
+              <p className="text-white">At Udaya, we believe in modern design, sustainability, and long-term reliability. Whether you&apos;re looking to upgrade your space or explore franchise opportunities, we are here to help you build a better, stronger, and more beautiful future.
               </p>
             </div>
           </FadeIn>

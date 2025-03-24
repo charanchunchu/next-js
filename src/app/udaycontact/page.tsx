@@ -34,7 +34,7 @@ export default function Contact() {
         <FadeIn>
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 mt-16">Get in Touch</h1>
           <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
-            We`&apos;`re here to help! Whether you`&apos;`re looking for uPVC & WPC windows and doors, professional installation, franchise opportunities, or expert guidance, reach out to us today.
+            We&apos;re here to help! Whether you&apos;re looking for uPVC & WPC windows and doors, professional installation, franchise opportunities, or expert guidance, reach out to us today.
           </p>
         </FadeIn>
 

@@ -296,7 +296,7 @@ export default function Services() {
                   <div>
                     <h2 className="text-4xl font-bold mb-6">Glass Options – Style, Security & Comfort</h2>
                     <p className="text-black-600 mb-8">
-                      At Udaya Doors, we offer a wide range of premium glass options to suit your needs. Whether you`&apos;`re looking for sunlight control, enhanced security, breathtaking views, or added privacy, we have the perfect solution for you.
+                      At Udaya Doors, we offer a wide range of premium glass options to suit your needs. Whether you&apos;re looking for sunlight control, enhanced security, breathtaking views, or added privacy, we have the perfect solution for you.
                     </p>
                     <div className="grid grid-cols-2 gap-6">
                       {glassTypes.map((type) => (
