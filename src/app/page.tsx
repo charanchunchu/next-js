@@ -253,9 +253,14 @@ export default function Home() {
                 <p className="text-white-600 mb-6">
                   At Udaya Infrastructure, we specialize in high-quality uPVC and WPC solutions that enhance homes and buildings. Our expert team focuses on modern design, durability, and sustainability to create doors and windows that are stylish, energy-efficient, and long-lasting. With advanced technology and eco-friendly materials, we ensure our products meet today’s needs while being ready for the future.
                 </p>
-                <Button size="lg" asChild>
-  <Link href="/udayabout">Learn More</Link>
-</Button>
+                {/* <Button size="lg" asChild>
+                  <Link href="/udayabout">Learn More</Link>
+                </Button> */}
+                <div className="flex justify-between items-center mt-6">
+                  <div className="py-2 rounded-xl text-xs font-normal dark:text-white">
+                    <Link href="/udayabout">Learn More →</Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
