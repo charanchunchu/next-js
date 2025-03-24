@@ -351,7 +351,7 @@ export default function Services() {
                 <FadeIn direction="up" delay={0.2} duration={0.8} amount={0.5}>
                   <div className="relative h-[400px]">
                     <Image
-                      src="/color_img"
+                      src="/lamination1.jpeg"
                       alt="Colored Profiles"
                       fill
                       className="object-cover rounded-lg"
@@ -360,16 +360,20 @@ export default function Services() {
                 </FadeIn>
                 <FadeIn direction="up" delay={0.2} duration={0.8} amount={0.5}>
                   <div>
-                    <h2 className="text-4xl font-bold mb-6">Coloured Profile</h2>
-                    <p className="text-gray-300 mb-8">
-                      Personalize your uPVC windows and doors with bold and stylish colors to match your interior and exterior themes.
-                    </p>
-                    <div className="grid grid-cols-3 gap-6">
-                      <div className="p-4 bg-black rounded-lg">Bold-Black</div>
-                      <div className="p-4 bg-white text-black rounded-lg">Elegant-White</div>
-                      <div className="p-4 bg-blue-500 rounded-lg">Edgy-Blue</div>
-                    </div>
-                  </div>
+  <h2 className="text-4xl font-bold mb-6">Coloured Profile</h2>
+  <p className="text-gray-300 mb-8">
+    Personalize your uPVC windows and doors with bold and stylish colors to match your interior and exterior themes.
+  </p>
+  <div className="grid grid-cols-3 gap-6">
+    <div className="p-4 bg-white text-black rounded-lg">Elegant-White</div>
+    <div className="p-4 bg-[#654321] text-white rounded-lg">Dark Oak</div>
+    <div className="p-4 bg-[#D4A017] text-white rounded-lg">Golden Oak</div>
+    <div className="p-4 bg-[#4B2C20] text-white rounded-lg">Mahogany</div>
+    <div className="p-4 bg-[#8B4513] text-white rounded-lg">Walnut</div>
+    <div className="p-4 bg-gray-400 text-black rounded-lg">Grey/Platinum</div>
+    <div className="p-4 bg-black text-white rounded-lg">Bold-Black</div>
+  </div>
+</div>
                 </FadeIn>
               </div>
             </div>
