@@ -214,13 +214,13 @@ const glazingTypes = [
   {
     title: "Single Glazing",
     description: "Single glazing includes just one single layer of glass. with an air space left in between the two for better thermal performance.",
-    image: "/doubleglazing.png",
+    image: "/singleglazing.png",
   },
   {
     title: "Double Glazing",
     description:
       "In double glazing, two layers of glass are sealed together with an air space left in between the two for better thermal performance.",
-    image: "/singleglazing.png",
+    image: "/doubleglazing.png",
   },
   {
     title: "Triple Glazing",
