@@ -35,7 +35,7 @@ export function ThreeDCardDemo() {
               />
             </CardItem>
             <div className="flex justify-between items-center mt-6">
-              <CardItem translateZ={20} as={Link} href="/services" className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
+              <CardItem translateZ={20} as={Link} href="/udayservices" className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
                 See More →
               </CardItem>
             </div>
@@ -61,7 +61,7 @@ export function ThreeDCardDemo() {
               />
             </CardItem>
             <div className="flex justify-between items-center mt-6">
-              <CardItem translateZ={20} as={Link} href="/services" className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
+              <CardItem translateZ={20} as={Link} href="/udayservices" className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
                 See More →
               </CardItem>
             </div>
@@ -87,7 +87,7 @@ export function ThreeDCardDemo() {
               />
             </CardItem>
             <div className="flex justify-between items-center mt-6">
-              <CardItem translateZ={20} as={Link} href="/services" className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
+              <CardItem translateZ={20} as={Link} href="/udayservices" className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
                 See More →
               </CardItem>
             </div>

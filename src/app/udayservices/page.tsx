@@ -387,7 +387,7 @@ export default function Services() {
                 {glazingTypes.map((type, index) => (
                   <FadeIn key={type.title} delay={index * 0.1}>
                     <motion.div className="flex items-center space-x-4" whileHover={{ y: -5 }}>
-                      <Image src={type.image} alt={type.title} className="w-32 h-auto" />
+                      <Image src={type.image} alt={type.title} width={128} height={128} className="h-auto" />
                       <div>
                         <h3 className="text-lg font-bold">{type.title}</h3>
                         <p className="text-gray-600">{type.description}</p>
@@ -487,7 +487,14 @@ export default function Services() {
               <span className="absolute left-0 bottom-[-6px] h-1 w-20 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
             </h2>
             <div className="container flex justify-center">
-              <Image src="/villa-window-app-pic.jpg" alt="Villa Window" className="mx-auto" />
+              <div className="relative w-64 h-40 mx-auto">
+                <Image
+                  src="/villa-window-app-pic.jpg"
+                  alt="Villa Window"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </section>
         </div>

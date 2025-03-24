@@ -26,7 +26,7 @@ const content = [
       "The advanced multi-chambered structure enhances thermal insulation and soundproofing, keeping your home quieter and more energy-efficient while reducing electricity costs.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-       Multi Chambered
+        Multi Chambered
       </div>
     ),
   },
@@ -76,7 +76,7 @@ const slides = [
     id: 1,
     title: "UDAY",
     subtitle: "WINDOWS & DOORS",
-    description:"Upgrade your home with high-quality windows and doors. Enjoy more natural light, stylish designs, and improved energy efficiency in every room.",
+    description: "Upgrade your home with high-quality windows and doors. Enjoy more natural light, stylish designs, and improved energy efficiency in every room.",
     image: "/1674035125_banner.webp",
   },
   {
@@ -201,9 +201,6 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-
-
-
           <div className="absolute bottom-8 right-8 flex gap-4">
             {slides.map((slide, index) => (
               <button
@@ -213,12 +210,12 @@ export default function Home() {
                   }`}
               >
                 <Image
-  src={slide.image || "/placeholder.svg"}
-  alt={`Slide ${index + 1}`}
-  width={500} // Set appropriate width
-  height={300} // Set appropriate height
-  className="w-full h-full object-cover"
-/>
+                  src={slide.image || "/placeholder.svg"}
+                  alt={`Slide ${index + 1}`}
+                  width={500}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
               </button>
             ))}
           </div>
@@ -254,9 +251,11 @@ export default function Home() {
                   <span className="absolute left-0 bottom-[-6px] h-1 w-10 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
                 </h2>
                 <p className="text-white-600 mb-6">
-                At Udaya Infrastructure, we specialize in high-quality uPVC and WPC solutions that enhance homes and buildings. Our expert team focuses on modern design, durability, and sustainability to create doors and windows that are stylish, energy-efficient, and long-lasting. With advanced technology and eco-friendly materials, we ensure our products meet today’s needs while being ready for the future.
+                  At Udaya Infrastructure, we specialize in high-quality uPVC and WPC solutions that enhance homes and buildings. Our expert team focuses on modern design, durability, and sustainability to create doors and windows that are stylish, energy-efficient, and long-lasting. With advanced technology and eco-friendly materials, we ensure our products meet today’s needs while being ready for the future.
                 </p>
-                <Button size="lg">Learn More</Button>
+                <Button size="lg" asChild>
+  <Link href="/udayabout">Learn More</Link>
+</Button>
               </div>
             </div>
           </div>
@@ -269,13 +268,13 @@ export default function Home() {
           <div className="container mx-auto px-4 mb-12">
             <div className="text-center">
               <h2 className="text-4xl text-white text-center font-bold mb-4 relative group inline-block">
-              Advantages of
-              <span className="absolute left-0 bottom-[-6px] h-1 w-20 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+                Advantages of
+                <span className="absolute left-0 bottom-[-6px] h-1 w-20 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
               </h2>
             </div>
             <p className="text-4xl text-center mb-12 mt-2">
-            <span className="font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
-            UDAYA INFRASTRUCTURE</span>
+              <span className="font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
+                UDAYA INFRASTRUCTURE</span>
             </p>
           </div>
           <StickyScroll content={content} />
@@ -295,13 +294,13 @@ export default function Home() {
             <div className="relative flex justify-center min-h-[600px] mt-12">
               {/* Central Window Image */}
               <div className="relative w-[300px] h-[300px] transition-all duration-500 hover:scale-105">
-              <Image
-  src="/ezgif.com-webp-to-gif-converter.gif"
-  alt="Window Preview"
-  width={500} 
-  height={300} 
-  className="w-full h-full object-contain"
-/>
+                <Image
+                  src="/ezgif.com-webp-to-gif-converter.gif"
+                  alt="Window Preview"
+                  width={500}
+                  height={300}
+                  className="w-full h-full object-contain"
+                />
               </div>
               {/* Customization Options */}
               {customizationOptions.map((option) => (
@@ -314,13 +313,13 @@ export default function Home() {
                     }}
                   >
                     <div>
-                    <Image
-  src={option.icon}
-  alt={option.label}
-  width={80} // Set appropriate width
-  height={80} // Set appropriate height
-  className="w-20 h-20 object-cover rounded-full z-10"
-/>
+                      <Image
+                        src={option.icon}
+                        alt={option.label}
+                        width={80} // Set appropriate width
+                        height={80} // Set appropriate height
+                        className="w-20 h-20 object-cover rounded-full z-10"
+                      />
                     </div>
                     <p className="text-white text-sm mt-2 text-center">
                       {option.label}
@@ -340,7 +339,7 @@ export default function Home() {
 
       <section className="bg-black text-white">
         <FranchiseSection />
-        </section>
+      </section>
     </div>
   )
 }
