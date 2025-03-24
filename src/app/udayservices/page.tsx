@@ -380,28 +380,28 @@ export default function Services() {
           </section>
           {/* Glazing Types Section */}
           <section className="relative py-20">
-  <div className="container mx-auto px-4">
-    <FadeIn>
-      <h2 className="text-4xl font-bold mb-6 text-center">Glazing Types</h2>
-      <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-        Choose between single, double, or triple-glazed glass units for Udaya Doors uPVC windows and doors. Enhance thermal efficiency and for added security, opt for toughened glass.
-      </p>
-    </FadeIn>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
-      {glazingTypes.map((type, index) => (
-        <FadeIn key={type.title} delay={index * 0.1}>
-          <motion.div className="flex flex-col items-center space-y-4" whileHover={{ y: -5 }}>
-            <Image src={type.image} alt={type.title} width={128} height={128} className="h-auto" />
-            <div className="text-center">
-              <h3 className="text-lg font-bold">{type.title}</h3>
-              <p className="text-gray-600">{type.description}</p>
+            <div className="container mx-auto px-4">
+              <FadeIn>
+                <h2 className="text-4xl font-bold mb-6 text-center">Glazing Types</h2>
+                <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                  Choose between single, double, or triple-glazed glass units for Udaya Doors uPVC windows and doors. Enhance thermal efficiency and for added security, opt for toughened glass.
+                </p>
+              </FadeIn>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-10">
+                {glazingTypes.map((type, index) => (
+                  <FadeIn key={type.title} delay={index * 0.1}>
+                    <motion.div className="flex flex-col items-center space-y-4" whileHover={{ y: -5 }}>
+                      <Image src={type.image} alt={type.title} width={128} height={128} className="h-auto" />
+                      <div className="text-center">
+                        <h3 className="text-lg font-bold">{type.title}</h3>
+                        <p className="text-gray-600">{type.description}</p>
+                      </div>
+                    </motion.div>
+                  </FadeIn>
+                ))}
+              </div>
             </div>
-          </motion.div>
-        </FadeIn>
-      ))}
-    </div>
-  </div>
-</section>
+          </section>
           {/* Mesh Options Section */}
           <section id="hardware" className="relative py-20 bg-white">
             <div className="container mx-auto px-4">
@@ -486,16 +486,16 @@ export default function Services() {
             </div>
           </section>
           <section className="py-20 flex flex-col lg:flex-row justify-center items-center gap-8">
-    <div className="text-center lg:text-left">
-      <h2 className="text-4xl bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text font-bold mb-4 relative group inline-block">
-        Applications
-        <span className="absolute left-0 bottom-[-6px] h-1 w-20 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
-      </h2>
-    </div>
-    <div className="w-full">
-      <img src="/villa-window-app-pic.jpg" alt="Villa Window" className="w-full object-cover" />
-    </div>
-  </section>
+            <div className="text-center lg:text-left">
+              <h2 className="text-4xl bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text font-bold mb-4 relative group inline-block">
+                Applications
+                <span className="absolute left-0 bottom-[-6px] h-1 w-20 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+              </h2>
+            </div>
+            <div className="w-full">
+              <img src="/villa-window-app-pic.jpg" alt="Villa Window" className="w-full object-cover" />
+            </div>
+          </section>
         </div>
       </AnimatePresence>
     </div>

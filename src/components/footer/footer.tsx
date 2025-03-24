@@ -40,7 +40,7 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Contact Info</h3>
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
-                <MapPin className="h-8 w-12 text-gray-200" />
+                <MapPin className="h-6 w-10 text-gray-200" />
                 <span className="text-gray-200">UDAYA INFRASTRUCTURE, Mubharak Nagar, Nizamabad </span>
               </li>
               <li className="flex items-center space-x-2">
