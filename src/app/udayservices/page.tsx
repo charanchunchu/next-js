@@ -493,8 +493,14 @@ export default function Services() {
               </h2>
             </div>
             <div className="w-full">
-              <img src="/villa-window-app-pic.jpg" alt="Villa Window" className="w-full object-cover" />
-            </div>
+            <Image 
+              src="/villa-window-app-pic.jpg" 
+              alt="Villa Window" 
+              width={1200}
+              height={800}
+              className="w-full object-cover"
+            />
+          </div>
           </section>
         </div>
       </AnimatePresence>

@@ -16,7 +16,7 @@ export default function Header() {
   const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isTransparent, setIsTransparent] = useState(pathname === "/")
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
