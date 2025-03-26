@@ -38,7 +38,7 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto">
-              We're here to help! Whether you're looking for uPVC & WPC windows and doors, professional installation, franchise opportunities, or expert guidance, reach out to us today.
+              We&apos;re here to help! Whether you&apos;re looking for uPVC &amp; WPC windows and doors, professional installation, franchise opportunities, or expert guidance, reach out to us today.
             </p>
           </div>
         </FadeIn>

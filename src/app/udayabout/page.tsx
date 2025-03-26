@@ -94,7 +94,7 @@ export default function About() {
               />
             </div>
           </FadeIn>
-          
+
           <FadeIn>
             <div className="space-y-4 md:space-y-6">
               <h2 className="text-2xl sm:text-3xl font-bold text-white">Our Story</h2>
@@ -105,7 +105,7 @@ export default function About() {
                 With years of experience, we have successfully delivered landmark projects that have transformed urban spaces and improved communities. Now, expanding our expertise, Udaya Architecture specializes in high-quality uPVC & WPC windows and doors, providing durable, stylish, and energy-efficient solutions for homes and businesses.
               </p>
               <p className="text-gray-300 text-sm sm:text-base">
-                At Udaya, we believe in modern design, sustainability, and long-term reliability. Whether you're looking to upgrade your space or explore franchise opportunities, we are here to help you build a better, stronger, and more beautiful future.
+                At Udaya, we believe in modern design, sustainability, and long-term reliability. Whether you&apos;re looking to upgrade your space or explore franchise opportunities, we are here to help you build a better, stronger, and more beautiful future.
               </p>
             </div>
           </FadeIn>
@@ -126,7 +126,7 @@ export default function About() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {values.map((value, index) => (
             <FadeIn key={index} delay={index * 0.1}>
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-xl p-5 sm:p-6 text-center shadow-lg h-full flex flex-col"
                 whileHover={{ y: -5 }}
               >
