@@ -16,6 +16,7 @@ export default function Header() {
   const pathname = usePathname()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isTransparent, setIsTransparent] = useState(pathname === "/")
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +29,7 @@ export default function Header() {
 
     if (pathname === "/") {
       window.addEventListener("scroll", handleScroll)
-      handleScroll() // Ensure transparency is set immediately on page load
+      handleScroll()
     } else {
       setIsTransparent(false)
     }
@@ -36,44 +37,55 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [pathname])
 
+  // Function to check if a link is active
+  const isActive = (path: string) => {
+    return pathname === path || 
+           (path !== "/" && pathname.startsWith(path))
+  }
+
   return (
     <header className={`top-0 left-0 right-0 z-50 ${isTransparent ? "absolute bg-transparent" : "sticky bg-white shadow-md"}`}>
       <nav className="container mx-auto px-4 py-6 flex items-center justify-between">
-      <Link href="/" className="flex items-center space-x-3 p-2">
-      {/* Icon in the center-left */}
-      {/* <Building2 className="w-6 h-6 text-blue" /> */}
-
-      {/* Text in two lines with gradient */}
-      <div className="flex flex-col leading-tight">
-        <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
-          UDAYA
-        </span>
-        <span className="text-2.5xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">INFRASTRUCTURE</span>
-      </div>
-    </Link>
+        <Link href="/" className="flex items-center space-x-3 p-2">
+          <div className="flex flex-col leading-tight">
+            <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
+              UDAYA
+            </span>
+            <span className="text-2.5xl font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
+              INFRASTRUCTURE
+            </span>
+          </div>
+        </Link>
 
         <button
-          className={`md:hidden text-gray-700 focus:outline-none z-20 ${isMenuOpen ? 'fixed top-6 right-6' : ''}`}
+          className={`md:hidden focus:outline-none z-20 ${
+            isMenuOpen
+              ? 'fixed top-6 right-6 text-gray-600'
+              : isTransparent && !isScrolled
+                ? 'text-white'
+                : 'text-gray-800'
+          } transition-colors duration-200`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
+
         <ul
-          className={`fixed inset-0 bg-white ${isMenuOpen ? 'bg-opacity-100' : 'bg-opacity-0'} flex flex-col items-center justify-center gap-6 text-xl transition-transform transform ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          } md:static md:flex-row md:gap-8 md:text-base md:translate-x-0 md:bg-transparent`}
+          className={`fixed inset-0 bg-white flex flex-col items-center justify-center gap-6 text-xl transition-all duration-300 md:static md:flex-row md:gap-8 md:text-base md:bg-transparent ${
+            isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full md:opacity-100 md:translate-y-0'
+          }`}
         >
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
                 href={item.path}
                 className={`px-4 py-2 rounded transition-colors ${
-                  pathname === item.path
-                    ? "bg-gray-500 text-white border border-gradient-to-r from-orange-600 via-orange-500 to-pink-600 boder-1pxsolid-orange rounded"
-                    : isTransparent
-                    ? "text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-orange-600 hover:via-orange-500 hover:to-pink-600"
-                    : "text-black hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-orange-600 hover:via-orange-500 hover:to-pink-600"
-                }`}
+                  isActive(item.path)
+                    ? "bg-gradient-to-r from-orange-600 to-pink-600 text-white"
+                    : isTransparent && !isMenuOpen
+                      ? "text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-orange-600 hover:via-orange-500 hover:to-pink-600"
+                      : "text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-orange-600 hover:via-orange-500 hover:to-pink-600"
+                } font-medium`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

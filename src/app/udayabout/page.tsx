@@ -68,50 +68,73 @@ const values = [
 ]
 export default function About() {
   return (
-    <div className="min-h-screen bg-black from-gray-50 to-gray-100">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-black">
+      <div className="container mx-auto px-4 sm:px-6 py-12 md:py-16 lg:py-20">
+        {/* Header Section */}
         <FadeIn>
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">About <span className="font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
-            UDAYA INFRASTRUCTURE</span></h1>
+          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+              About <span className="font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
+                UDAYA INFRASTRUCTURE
+              </span>
+            </h1>
+          </div>
         </FadeIn>
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <FadeIn >
-            <div className="relative aspect-4/3 rounded-2xl overflow-hidden h-0 pb-[75%]">
+
+        {/* Story Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mb-16 md:mb-20 lg:mb-24">
+          <FadeIn>
+            <div className="relative aspect-video lg:aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
                 src="/about-banner-1.jpg"
                 alt="Uday Infrastructure Team"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
           </FadeIn>
-          <FadeIn >
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white">Our Story</h2>
-              <p className="text-white">
+          
+          <FadeIn>
+            <div className="space-y-4 md:space-y-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Our Story</h2>
+              <p className="text-gray-300 text-sm sm:text-base">
                 Founded in 2015 in Nizamabad, Telangana, Udaya Infrastructure has grown from a small local contractor into a trusted name in the infrastructure industry. Our journey has been built on innovation, quality, and a deep commitment to customer satisfaction.
               </p>
-              <p className="text-white">
+              <p className="text-gray-300 text-sm sm:text-base">
                 With years of experience, we have successfully delivered landmark projects that have transformed urban spaces and improved communities. Now, expanding our expertise, Udaya Architecture specializes in high-quality uPVC & WPC windows and doors, providing durable, stylish, and energy-efficient solutions for homes and businesses.
               </p>
-              <p className="text-white">At Udaya, we believe in modern design, sustainability, and long-term reliability. Whether you&apos;re looking to upgrade your space or explore franchise opportunities, we are here to help you build a better, stronger, and more beautiful future.
+              <p className="text-gray-300 text-sm sm:text-base">
+                At Udaya, we believe in modern design, sustainability, and long-term reliability. Whether you're looking to upgrade your space or explore franchise opportunities, we are here to help you build a better, stronger, and more beautiful future.
               </p>
             </div>
           </FadeIn>
         </div>
+
+        {/* Values Section */}
         <FadeIn>
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Advantages of Choosing <span className="font-bold text-4xl bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
-            UDAYA INFRASTRUCTURE</span></h2>
+          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
+              Advantages of Choosing <span className="font-bold bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text">
+                UDAYA INFRASTRUCTURE
+              </span>
+            </h2>
+          </div>
         </FadeIn>
-        <div className="grid md:grid-cols-4 gap-8">
+
+        {/* Values Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {values.map((value, index) => (
             <FadeIn key={index} delay={index * 0.1}>
-              <motion.div className="bg-white rounded-xl p-6 pb-10 text-center shadow-lg w-104 h-64" whileHover={{ y: -5 }}>
-                <div className="inline-block p-3 bg-gray-100 rounded-lg mb-4">
-                  <value.icon className="w-6 h-6 text-black-600" />
+              <motion.div 
+                className="bg-white rounded-xl p-5 sm:p-6 text-center shadow-lg h-full flex flex-col"
+                whileHover={{ y: -5 }}
+              >
+                <div className="inline-flex items-center justify-center p-3 bg-gray-100 rounded-lg mb-4 mx-auto">
+                  <value.icon className="w-6 h-6 text-black" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                <p className="text-black-600">{value.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 md:mb-3">{value.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base flex-grow">{value.description}</p>
               </motion.div>
             </FadeIn>
           ))}
