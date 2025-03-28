@@ -74,7 +74,7 @@ const content = [
 const slides = [
   {
     id: 1,
-    title: "UDAY",
+    title: "UDAYA",
     subtitle: "WINDOWS & DOORS",
     description: "Upgrade your home with high-quality windows and doors. Enjoy more natural light, stylish designs, and improved energy efficiency in every room.",
     image: "/1674035125_banner.webp",
