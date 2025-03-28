@@ -68,7 +68,7 @@ export function ImageGallery({ images, columns = 3 }: ImageGalleryProps) {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="relative w-full max-w-4xl bg-white rounded-lg overflow-hidden shadow-xl"
+              className="relative w-4xl max-w-4xl bg-white rounded-lg overflow-hidden shadow-xl"
               onClick={(e) => e.stopPropagation()}
             >
               <button
