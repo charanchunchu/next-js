@@ -359,19 +359,19 @@ export default function Services() {
                   </div>
                 </FadeIn>
                 <FadeIn direction="up" delay={0.2} duration={0.8} amount={0.5}>
-                  <div>
-                    <h2 className="text-4xl font-bold mb-6">Coloured Profile</h2>
-                    <p className="text-gray-300 mb-8">
+                  <div className="w-full">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">Coloured Profile</h2>
+                    <p className="text-gray-300 mb-6 md:mb-8">
                       Personalize your uPVC windows and doors with bold and stylish colors to match your interior and exterior themes.
                     </p>
-                    <div className="grid grid-cols-3 gap-6">
-                      <div className="p-4 bg-white text-black rounded-lg">Elegant-White</div>
-                      <div className="p-4 bg-[#654321] text-white rounded-lg">Dark Oak</div>
-                      <div className="p-4 bg-[#D4A017] text-white rounded-lg">Golden Oak</div>
-                      <div className="p-4 bg-[#4B2C20] text-white rounded-lg">Mahogany</div>
-                      <div className="p-4 bg-[#8B4513] text-white rounded-lg">Walnut</div>
-                      <div className="p-4 bg-gray-400 text-black rounded-lg">Grey/Platinum</div>
-                      <div className="p-4 bg-black text-white rounded-lg">Bold-Black</div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+                      <div className="p-3 sm:p-4 bg-white text-black rounded-lg text-sm sm:text-base">Elegant-White</div>
+                      <div className="p-3 sm:p-4 bg-[#654321] text-white rounded-lg text-sm sm:text-base">Dark Oak</div>
+                      <div className="p-3 sm:p-4 bg-[#D4A017] text-white rounded-lg text-sm sm:text-base">Golden Oak</div>
+                      <div className="p-3 sm:p-4 bg-[#4B2C20] text-white rounded-lg text-sm sm:text-base">Mahogany</div>
+                      <div className="p-3 sm:p-4 bg-[#8B4513] text-white rounded-lg text-sm sm:text-base">Walnut</div>
+                      <div className="p-3 sm:p-4 bg-gray-400 text-black rounded-lg text-sm sm:text-base">Grey/Platinum</div>
+                      <div className="p-3 sm:p-4 bg-black text-white rounded-lg text-sm sm:text-base col-span-2 sm:col-span-1">Bold-Black</div>
                     </div>
                   </div>
                 </FadeIn>
@@ -485,14 +485,19 @@ export default function Services() {
               </div>
             </div>
           </section>
-          <section className="py-20 flex flex-col lg:flex-row justify-center items-center gap-8">
-            <div className="text-center lg:text-left">
-              <h2 className="text-4xl bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text font-bold mb-4 relative group inline-block">
-                Applications
-                <span className="absolute left-0 bottom-[-6px] h-1 w-20 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
-              </h2>
-            </div>
-            <div className="w-full">
+          {/* Application Section */}
+          <section className="py-12 md:py-20">
+            <div className="container mx-auto px-4 flex flex-col lg:flex-row justify-center items-center gap-6 md:gap-8">
+              <div className="text-center lg:text-left lg:w-1/3">
+                <h2 className="text-3xl md:text-4xl bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 text-transparent bg-clip-text font-bold mb-4 relative group inline-block">
+                  Applications
+                  <span className="absolute left-0 bottom-[-4px] h-1 w-20 bg-gradient-to-r from-orange-600 via-orange-500 to-pink-600 transition-all duration-300 group-hover:w-full"></span>
+                </h2>
+                <p className="text-gray-600 mb-4 md:mb-0">
+                  Our products are perfect for various applications including villas, apartments, and commercial spaces. Each solution is tailored to meet specific architectural and functional requirements.
+                </p>
+              </div>
+              <div className="w-full">
             <Image 
               src="/villa-window-app-pic.jpg" 
               alt="Villa Window" 
@@ -500,7 +505,8 @@ export default function Services() {
               height={800}
               className="w-full object-cover"
             />
-          </div>
+              </div>
+            </div>
           </section>
         </div>
       </AnimatePresence>
