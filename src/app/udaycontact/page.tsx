@@ -13,12 +13,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    description: "+91-97018028077, +91-9700919166",
+    description: "+91-9618028077, +91-9700919166",
   },
   {
     icon: Mail,
     title: "Email Us",
-    description: "naveenbattu1993@gmail.com",
+    description: "infraudaya@gmail.com",
   },
   {
     icon: Clock,
